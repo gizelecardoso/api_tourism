@@ -12,7 +12,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 20_240_312_175_706) do
+ActiveRecord::Schema[7.1].define(version: 20_240_313_133_828) do
+  create_table 'interesting_points', charset: 'utf8mb4', collation: 'utf8mb4_0900_ai_ci', force: :cascade do |t|
+    t.string 'name'
+    t.string 'category'
+    t.integer 'rank'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+  end
+
   create_table 'places', charset: 'utf8mb4', collation: 'utf8mb4_0900_ai_ci', force: :cascade do |t|
     t.string 'name'
     t.string 'country'
