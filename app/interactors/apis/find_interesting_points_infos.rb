@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 module Apis
-  # Class responsible for call amadeus api and return some tourism places
-  class FindTourismInfos
+  # Class responsible for call amadeus api and return some interesting points of places
+  class FindInterestingPointsInfos
     include Interactor
     include HTTParty
     base_uri 'https://test.api.amadeus.com/v1/reference-data/locations/pois'

@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe Apis::FindTourismInfos, type: :interactor do
+RSpec.describe Apis::FindInterestingPointsInfos, type: :interactor do
   describe '#call' do
     context 'when has some information' do
       it 'returns points of tourism of some place' do
