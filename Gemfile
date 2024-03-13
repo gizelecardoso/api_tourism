@@ -49,6 +49,7 @@ gem 'bootsnap', require: false
 gem 'rubocop', require: false
 
 gem 'dotenv-rails', '~> 3.0', '>= 3.0.2'
+gem 'faker'
 gem 'httparty'
 gem 'interactor', '~> 3.1', '>= 3.1.2'
 

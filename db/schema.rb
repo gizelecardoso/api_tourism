@@ -12,7 +12,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-# rubocop:disable Metrics/BlockLength
 ActiveRecord::Schema[7.1].define(version: 20_240_313_142_656) do
   create_table 'interesting_points', charset: 'utf8mb4', collation: 'utf8mb4_0900_ai_ci', force: :cascade do |t|
     t.string 'name'
@@ -49,4 +48,3 @@ ActiveRecord::Schema[7.1].define(version: 20_240_313_142_656) do
   add_foreign_key 'interesting_points', 'places'
   add_foreign_key 'weathers', 'places'
 end
-# rubocop:enable Metrics/BlockLength
