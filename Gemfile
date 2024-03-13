@@ -50,6 +50,7 @@ gem 'rubocop', require: false
 
 gem 'dotenv-rails', '~> 3.0', '>= 3.0.2'
 gem 'faker'
+gem 'geocoder', '~> 1.8', '>= 1.8.2'
 gem 'httparty'
 gem 'interactor', '~> 3.1', '>= 3.1.2'
 
