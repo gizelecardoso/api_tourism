@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
-# Model responsible for interesting points of specific place infos
+# Model responsible for infos of interesting points of specific place
 class InterestingPoint < ApplicationRecord
 end
