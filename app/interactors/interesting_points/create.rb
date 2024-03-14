@@ -6,9 +6,13 @@ module InterestingPoints
     include Interactor
 
     def call
-      interesting_point = InterestingPoint.new(place: Place.first)
-
-      context.fail!(error: :invalid_record) unless interesting_point.save
+      context.tourism.each do |tour|
+        interesting_point = InterestingPoint.new(tour)
+        interesting_point.place = context.place
+        interesting_point.save!
+      end
+    rescue ActiveRecord::RecordInvalid => e
+      context.fail!(error: e.message)
     end
   end
 end

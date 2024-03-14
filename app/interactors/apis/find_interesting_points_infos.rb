@@ -8,7 +8,7 @@ module Apis
     base_uri 'https://test.api.amadeus.com/v1/reference-data/locations/pois'
 
     def call
-      context.geocoder = { latitude: 52.5186, longitude: 13.4081 }
+      # context.geocoder = { latitude: 52.5186, longitude: 13.4081 }
       context.tourism = []
 
       response = self.class.get("?latitude=#{context.geocoder[:latitude]}&longitude=#{context.geocoder[:longitude]}",

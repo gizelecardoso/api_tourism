@@ -3,7 +3,7 @@
 module Apis
   # Class responsible for organize all the steps to FIND tourism informations based on apis
   # at the end save into the database
-  class FindTourismInfos
+  class FindTourismInfosOrganizer
     include Interactor::Organizer
 
     organize FindGeocoderInfos,

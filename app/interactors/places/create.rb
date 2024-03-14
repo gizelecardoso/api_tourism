@@ -6,9 +6,9 @@ module Places
     include Interactor
 
     def call
-      place = Place.new
+      context.place = Place.new(context.place_param)
 
-      context.fail!(error: :invalid_record) unless place.save
+      context.fail!(error: :invalid_record) unless context.place.save
     end
   end
 end

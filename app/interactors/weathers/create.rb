@@ -6,9 +6,13 @@ module Weathers
     include Interactor
 
     def call
-      weather = Weather.new(place: Place.first)
-
-      context.fail!(error: :invalid_record) unless weather.save
+      context.weathers.each do |weather|
+        weather = Weather.new(weather)
+        weather.place = context.place
+        weather.save!
+      end
+    rescue ActiveRecord::RecordInvalid => e
+      context.fail!(error: e.message)
     end
   end
 end

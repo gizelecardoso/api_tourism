@@ -6,7 +6,7 @@ module Apis
     include Interactor
 
     def call
-      results = Geocoder.search('Nova York, NY')
+      results = Geocoder.search(context.place_param)
       coordinates = results.first.coordinates
 
       context.geocoder = { latitude: coordinates.first, longitude: coordinates.last }
